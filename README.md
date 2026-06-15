@@ -58,10 +58,10 @@ Implements a sequence detector for the binary pattern **1010** using both Moore 
 ![Schematic](synth/schematic.png)
 
 Key inferred primitives:
-- `RTL_MUX` trees — next-state logic for all 5 states
-- `RTL_REG_SYNC` — state register with synchronous reset (3 FDREs)
-- `RTL_ROM` — output logic (state == S4 → LED on)
-- `BUFG` — global clock buffer
+- `RTL_MUX` trees - next-state logic for all 5 states
+- `RTL_REG_SYNC` - state register with synchronous reset (3 FDREs)
+- `RTL_ROM` - output logic (state == S4 -> LED on)
+- `BUFG` - global clock buffer
 
 Full utilization report: [synth/utilization_report_seq.txt](synth/utilization_report_seq.txt)
 

@@ -1,4 +1,4 @@
-# 1010 Sequence Detector — Moore & Mealy FSM (Verilog)
+# 1010 Sequence Detector - Moore & Mealy FSM (Verilog)
 
 Implements a sequence detector for the binary pattern **1010** using both Moore and Mealy FSM architectures in Verilog HDL. Synthesized and simulated on **Xilinx Vivado 2024.2** targeting the **Artix-7 (xc7a35tcpg236-1)** FPGA.
 
@@ -25,23 +25,23 @@ Implements a sequence detector for the binary pattern **1010** using both Moore 
 
 ## Simulation Results
 
-### Moore vs Mealy — Side by Side
+### Moore vs Mealy - Side by Side
 ![Waveform 1](simulation/waveform_moore_mealy.png)
 
 - Both `dout_mealy` and `dout_moore` pulse HIGH on correct 1010 detection
-- Moore FSM state transitions: 0→1→2→3→4→0
-- Mealy FSM state transitions: 0→1→2→3→0
+- Moore FSM state transitions: 0->1->2->3->4->0
+- Mealy FSM state transitions: 0->1->2->3->0
 
 ### State Transitions Detail
 ![Waveform 2](simulation/waveform_states.png)
 
-- Mealy `r_next_state[1:0]` cycles through 0→1→2→3
-- Moore `r_next_state[2:0]` cycles through 0→1→2→3→4
-- Both overlapping and non-overlapping modes verified ✅
+- Mealy `r_next_state[1:0]` cycles through 0->1->2->3
+- Moore `r_next_state[2:0]` cycles through 0->1->2->3->4
+- Both overlapping and non-overlapping modes verified 
 
 ---
 
-## Synthesis Results — Xilinx Artix-7 (xc7a35tcpg236-1)
+## Synthesis Results - Xilinx Artix-7 (xc7a35tcpg236-1)
 
 > Note: Synthesized on Moore FSM module (`seq_1010_moore`)
 
